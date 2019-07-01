@@ -1930,11 +1930,22 @@ View(data)</code></pre>
 </div>
 <div id="cleaning-data" class="section level4">
 <h4>Cleaning Data</h4>
-<p>Let’s ignore any candidate who did not qualify for the first debate.</p>
+<p>I’m including only the candidates who were in the first debate, and adding Bullock.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGViYXRlIDwtIFxuYGBgIn0= -->
-<pre class="r"><code>debate &lt;- </code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjcmVhdGUgYSBsaXN0IG9mIHRoZSAyMCBjYW5kaWRhdGVzIHdobyBxdWFsaWZpZWRcbiMgZm9yIHRoZSBmaXJzdCBkZW1vY3JhdGljIHByaW1hcnkgZGViYXRlXG5jYW5kaWRhdGVzIDwtIGMoXCJCZW5uZXR0XCIsIFwiQmlkZW5cIixcbiAgICAgICAgICAgICAgICBcIkJvb2tlclwiLCBcIkJ1bGxvY2tcIixcbiAgICAgICAgICAgICAgICBcIkJ1dHRpZ2llZ1wiLCBcIkNhc3Ryb1wiLFxuICAgICAgICAgICAgICAgIFwiZGUgQmxhc2lvXCIsIFwiRGVsYW5leVwiLFxuICAgICAgICAgICAgICAgIFwiR2FiYmFyZFwiLCBcIkdpbGxpYnJhbmRcIixcbiAgICAgICAgICAgICAgICBcIkhhcnJpc1wiLCBcIkluc2xlZVwiLFxuICAgICAgICAgICAgICAgIFwiS2xvYnVjaGFyXCIsIFwiTW91bHRvblwiLFxuICAgICAgICAgICAgICAgIFwiTydSb3Vya2VcIiwgXCJSeWFuXCIsXG4gICAgICAgICAgICAgICAgXCJTYW5kZXJzXCIsIFwiV2FycmVuXCIsXG4gICAgICAgICAgICAgICAgXCJXaWxsaWFtc29uXCIsIFwiWWFuZ1wiKVxuYGBgIn0= -->
+<pre class="r"><code># create a list of the 20 candidates who qualified
+# for the first democratic primary debate
+candidates &lt;- c(&quot;Bennett&quot;, &quot;Biden&quot;,
+                &quot;Booker&quot;, &quot;Bullock&quot;,
+                &quot;Buttigieg&quot;, &quot;Castro&quot;,
+                &quot;de Blasio&quot;, &quot;Delaney&quot;,
+                &quot;Gabbard&quot;, &quot;Gillibrand&quot;,
+                &quot;Harris&quot;, &quot;Inslee&quot;,
+                &quot;Klobuchar&quot;, &quot;Moulton&quot;,
+                &quot;O'Rourke&quot;, &quot;Ryan&quot;,
+                &quot;Sanders&quot;, &quot;Warren&quot;,
+                &quot;Williamson&quot;, &quot;Yang&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1942,7 +1953,7 @@ View(data)</code></pre>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkRlbW9jcmF0aWMgUHJlc2lkZW50aWFsIEZ1bmRyYWlzaW5nIGFzIG9mIDAxIEp1bHkgMjAxOSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCg0KIyMjIyBDb21tYW5kcw0KKipSdW4qKjogcGxhY2UgY3Vyc29yIGluc2lkZSBjb2RlIGNodW5rLCAqKkN0cmwgKyBTaGlmdCArIEVudGVyKiouIA0KDQoqKk5ldyBjaHVuazogQ3RybCArIGFsdCArIGkqKi4NCg0KKipQcmV2aWV3IEhUTUwgZmlsZTogQ3RybCArIFNoaWZ0ICsgSyoqLg0KDQpVbmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBjb2RlIGNodW5rcy4NCkluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGlzIGRpc3BsYXllZC4NCg0KIyMjIEluc3RhbGxhdGlvbiAmIFNldHVwDQpgYGB7ciBzZXR1cH0NCiMgSU5TVEFMTElORyBQQUNLQUdFUzoNCiMgaW5zdGFsbC5wYWNrYWdlcygiUGFja2FnZU5hbWUiKQ0KDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShyZWFkcikNCmBgYA0KDQojIyMjIEltcG9ydCBEYXRhDQpgYGB7ciBkYXRhfQ0KIyBJbXBvcnQgZGF0YSBmcm9tIENTViBhcyB0aWJibGUgKHJlbGF0aXZlIHBhdGgpDQpkYXRhIDwtIHJlYWRfY3N2KGZpbGUgPSAnMjAxOS0wNy0wMV9kZW0tUE9UVVMuY3N2JywgY29sX25hbWVzID0gVFJVRSkNCg0KIyBsb29rIGF0IHN0cnVjdHVyZSBvZiBkYXRhDQpzdHIoZGF0YSkNCg0KIyB2aWV3IGRhdGEgaW4gc2VwYXJhdGUgdGFiDQpWaWV3KGRhdGEpDQoNCmBgYA0KDQoNCiMjIyMgQ2xlYW5pbmcgRGF0YQ0KTGV0J3MgaWdub3JlIGFueSBjYW5kaWRhdGUgd2hvIGRpZCBub3QgcXVhbGlmeSBmb3IgdGhlIGZpcnN0IGRlYmF0ZS4NCmBgYHtyIGNsZWFufQ0KZGViYXRlIDwtIA0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkRlbW9jcmF0aWMgUHJlc2lkZW50aWFsIEZ1bmRyYWlzaW5nIGFzIG9mIDAxIEp1bHkgMjAxOSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCg0KIyMjIyBDb21tYW5kcw0KKipSdW4qKjogcGxhY2UgY3Vyc29yIGluc2lkZSBjb2RlIGNodW5rLCAqKkN0cmwgKyBTaGlmdCArIEVudGVyKiouIA0KDQoqKk5ldyBjaHVuazogQ3RybCArIGFsdCArIGkqKi4NCg0KKipQcmV2aWV3IEhUTUwgZmlsZTogQ3RybCArIFNoaWZ0ICsgSyoqLg0KDQpVbmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBjb2RlIGNodW5rcy4NCkluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGlzIGRpc3BsYXllZC4NCg0KIyMjIEluc3RhbGxhdGlvbiAmIFNldHVwDQpgYGB7ciBzZXR1cH0NCiMgSU5TVEFMTElORyBQQUNLQUdFUzoNCiMgaW5zdGFsbC5wYWNrYWdlcygiUGFja2FnZU5hbWUiKQ0KDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShyZWFkcikNCmBgYA0KDQojIyMjIEltcG9ydCBEYXRhDQpgYGB7ciBkYXRhfQ0KIyBJbXBvcnQgZGF0YSBmcm9tIENTViBhcyB0aWJibGUgKHJlbGF0aXZlIHBhdGgpDQpkYXRhIDwtIHJlYWRfY3N2KGZpbGUgPSAnMjAxOS0wNy0wMV9kZW0tUE9UVVMuY3N2JywgY29sX25hbWVzID0gVFJVRSkNCg0KIyBsb29rIGF0IHN0cnVjdHVyZSBvZiBkYXRhDQpzdHIoZGF0YSkNCg0KIyB2aWV3IGRhdGEgaW4gc2VwYXJhdGUgdGFiDQpWaWV3KGRhdGEpDQoNCmBgYA0KDQoNCiMjIyMgQ2xlYW5pbmcgRGF0YQ0KSSdtIGluY2x1ZGluZyBvbmx5IHRoZSBjYW5kaWRhdGVzIHdobyB3ZXJlIGluIHRoZSBmaXJzdCBkZWJhdGUsIGFuZCBhZGRpbmcgQnVsbG9jay4NCmBgYHtyIGNsZWFufQ0KDQoNCg0KIyBjcmVhdGUgYSBsaXN0IG9mIHRoZSAyMCBjYW5kaWRhdGVzIHdobyBxdWFsaWZpZWQNCiMgZm9yIHRoZSBmaXJzdCBkZW1vY3JhdGljIHByaW1hcnkgZGViYXRlDQoNCmNhbmRpZGF0ZXMgPC0gYygiQmVubmV0dCIsICJCaWRlbiIsDQogICAgICAgICAgICAgICAgIkJvb2tlciIsICJCdWxsb2NrIiwNCiAgICAgICAgICAgICAgICAiQnV0dGlnaWVnIiwgIkNhc3RybyIsDQogICAgICAgICAgICAgICAgImRlIEJsYXNpbyIsICJEZWxhbmV5IiwNCiAgICAgICAgICAgICAgICAiR2FiYmFyZCIsICJHaWxsaWJyYW5kIiwNCiAgICAgICAgICAgICAgICAiSGFycmlzIiwgIkluc2xlZSIsDQogICAgICAgICAgICAgICAgIktsb2J1Y2hhciIsICJNb3VsdG9uIiwNCiAgICAgICAgICAgICAgICAiTydSb3Vya2UiLCAiUnlhbiIsDQogICAgICAgICAgICAgICAgIlNhbmRlcnMiLCAiV2FycmVuIiwNCiAgICAgICAgICAgICAgICAiV2lsbGlhbXNvbiIsICJZYW5nIikNCmBgYA0KDQo=</div>
 
 
 

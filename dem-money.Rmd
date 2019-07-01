@@ -39,8 +39,23 @@ View(data)
 
 
 #### Cleaning Data
-Let's ignore any candidate who did not qualify for the first debate.
+I'm including only the candidates who were in the first debate, and adding Bullock.
 ```{r clean}
-debate <- 
+
+
+
+# create a list of the 20 candidates who qualified
+# for the first democratic primary debate
+
+candidates <- c("Bennett", "Biden",
+                "Booker", "Bullock",
+                "Buttigieg", "Castro",
+                "de Blasio", "Delaney",
+                "Gabbard", "Gillibrand",
+                "Harris", "Inslee",
+                "Klobuchar", "Moulton",
+                "O'Rourke", "Ryan",
+                "Sanders", "Warren",
+                "Williamson", "Yang")
 ```
 
