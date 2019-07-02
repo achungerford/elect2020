@@ -41,7 +41,10 @@ View(data)
 #### Cleaning Data
 I'm including only the candidates who were in the first debate, and adding Bullock.
 ```{r clean}
+# Save column names to columns
+columns <- colnames(data)
 
+# Keep only columns needed for analysis
 
 
 # create a list of the 20 candidates who qualified
@@ -57,5 +60,9 @@ candidates <- c("Bennett", "Biden",
                 "O'Rourke", "Ryan",
                 "Sanders", "Warren",
                 "Williamson", "Yang")
+
+# loop through names to retain only rows in candidates variable
+
+
 ```
 
