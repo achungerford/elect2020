@@ -22,7 +22,7 @@ library(readr)
 ```
 
 #### Import Data
-```{r data}
+```{r data, warning=FALSE}
 # Import data from CSV as tibble (relative path)
 data <- read_csv(file = '2019-07-01_dem-POTUS.csv', col_names = TRUE)
 
@@ -31,7 +31,6 @@ str(data)
 
 # view data in separate tab
 View(data)
-
 ```
 
 
