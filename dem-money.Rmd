@@ -5,20 +5,17 @@ output: html_notebook
 
 
 #### Commands
-**Run**: place cursor inside code chunk, **Ctrl + Shift + Enter**. 
+**Run**: place cursor inside code chunk, `Ctrl + Shift + Enter`. 
 
-**New chunk: Ctrl + alt + i**.
+**New chunk**: `Ctrl + alt + i`.
 
-**Preview HTML file: Ctrl + Shift + K**.
+**Preview HTML file**: `Ctrl + Shift + K`.
 
 Unlike *Knit*, *Preview* does not run any code chunks.
 Instead, the output of the chunk when it was last run is displayed.
 
 ### Installation & Setup
 ```{r setup}
-# INSTALLING PACKAGES:
-# install.packages("PackageName")
-
 library(dplyr)
 library(ggplot2)
 library(readr)
@@ -62,7 +59,6 @@ candidates <- c("Bennett", "Biden",
                 "Williamson", "Yang")
 
 # loop through names to retain only rows in candidates variable
-
 
 ```
 
