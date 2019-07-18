@@ -1,0 +1,12 @@
+---
+title: "Democratic POTUS Fundraising - python"
+output: html_notebook
+---
+
+```{python}
+
+```
+
+There are two types of categorical variables: nominal, ordinal.
+
+A nominal variable is a categorical variable without an implied order. This means that it is impossible to say 'one is worth more than the other'. Think "nominal = name". Consider animals, `elephant`, `giraffe`, `hippo`.

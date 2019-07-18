@@ -29,7 +29,7 @@ str(data)
 
 ## Clean Data
 
-I'm including only the candidates who were in the first debate, and adding Bullock.
+I'm including only the candidates who were in the first debate, and since Swalwell dropped out I'm replacing him with Montana Governor Steve Bullock.
 
 ### Choose columns for analysis
 
@@ -39,12 +39,12 @@ df <- data[, c("name",
                "cash_on_hand_end_period",
                "receipts",
                "disbursements",
+               "debts_owed_by_committee",
+               "last_file_date",
+               "first_file_date",
+               "last_f2_date",
                "address_state",
                "candidate_id",
-               "first_file_date",
-               "last_file_date",
-               "last_f2_date",
-               "debts_owed_by_committee",
                "has_raised_funds")]
 
 # look at the data in a new tab
@@ -67,8 +67,6 @@ candidates <- c("Bennett", "Biden",
                 "O'Rourke", "Ryan",
                 "Sanders", "Warren",
                 "Williamson", "Yang")
-
-
 ```
 
 
