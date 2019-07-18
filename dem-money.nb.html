@@ -1767,15 +1767,8 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
-<div id="commands" class="section level4">
-<h4>Commands</h4>
-<p><strong>Run</strong>: place cursor inside code chunk, <code>Ctrl + Shift + Enter</code>.</p>
-<p><strong>New chunk</strong>: <code>Ctrl + alt + i</code>.</p>
-<p><strong>Preview HTML file</strong>: <code>Ctrl + Shift + K</code>.</p>
-<p>Unlike <em>Knit</em>, <em>Preview</em> does not run any code chunks. Instead, the output of the chunk when it was last run is displayed.</p>
-</div>
-<div id="installation-setup" class="section level3">
-<h3>Installation &amp; Setup</h3>
+<div id="installation-setup" class="section level2">
+<h2>Installation &amp; Setup</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmxpYnJhcnkoZ2dwbG90MilcbmxpYnJhcnkocmVhZHIpXG5gYGAifQ== -->
@@ -1785,156 +1778,53 @@ library(readr)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<div id="import-data" class="section level4">
-<h4>Import Data</h4>
+</div>
+<div id="import-data" class="section level2">
+<h2>Import Data</h2>
+<p>Source: FEC.gov | Campaign Finance Data | Browse Data | Candidates for President</p>
+<p>Filters:</p>
+<ul>
+<li>Election year: 2020</li>
+<li>Time period: 2019-2020</li>
+<li>Political Party: Democratic</li>
+</ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbXBvcnQgZGF0YSBmcm9tIENTViBhcyB0aWJibGUgKHJlbGF0aXZlIHBhdGgpXG5kYXRhIDwtIHJlYWRfY3N2KGZpbGUgPSAnMjAxOS0wNy0wMV9kZW0tUE9UVVMuY3N2JywgY29sX25hbWVzID0gVFJVRSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbXBvcnQgZGF0YSBmcm9tIENTViBhcyB0aWJibGUgKHJlbGF0aXZlIHBhdGgpXG5kYXRhIDwtIHJlYWRfY3N2KGZpbGUgPSAnMjAxOS0wNy0wMV9kZW0tUE9UVVMuY3N2JywgY29sX25hbWVzID0gVFJVRSlcblxuIyBsb29rIGF0IHRoZSB0aGUgY29sdW1ucyAmIHR5cGUgb2Ygb2JzZXJ2YXRpb25zIGNvbnRhaW5lZCBpbiBlYWNoIGNvbHVtblxuc3RyKGRhdGEpXG5gYGAifQ== -->
 <pre class="r"><code># Import data from CSV as tibble (relative path)
-data &lt;- read_csv(file = '2019-07-01_dem-POTUS.csv', col_names = TRUE)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgZGlzdHJpY3RfbnVtYmVyID0gY29sX2RvdWJsZSgpLFxuICBsb2FkX2RhdGUgPSBjb2xfZGF0ZXRpbWUoZm9ybWF0ID0gXCJcIiksXG4gIGZpcnN0X2ZpbGVfZGF0ZSA9IGNvbF9kYXRlKGZvcm1hdCA9IFwiXCIpLFxuICBsYXN0X2ZpbGVfZGF0ZSA9IGNvbF9kYXRlKGZvcm1hdCA9IFwiXCIpLFxuICBsYXN0X2YyX2RhdGUgPSBjb2xfZGF0ZShmb3JtYXQgPSBcIlwiKSxcbiAgdHdvX3llYXJfcGVyaW9kID0gY29sX2RvdWJsZSgpLFxuICBjYW5kaWRhdGVfZWxlY3Rpb25feWVhciA9IGNvbF9kb3VibGUoKSxcbiAgY2FuZGlkYXRlX2luYWN0aXZlID0gY29sX2xvZ2ljYWwoKSxcbiAgYWN0aXZlX3Rocm91Z2ggPSBjb2xfZG91YmxlKCksXG4gIGVsZWN0aW9uX3llYXIgPSBjb2xfZG91YmxlKCksXG4gIGN5Y2xlID0gY29sX2RvdWJsZSgpLFxuICBpc19lbGVjdGlvbiA9IGNvbF9sb2dpY2FsKCksXG4gIHJlY2VpcHRzID0gY29sX2RvdWJsZSgpLFxuICBkaXNidXJzZW1lbnRzID0gY29sX2RvdWJsZSgpLFxuICBjYXNoX29uX2hhbmRfZW5kX3BlcmlvZCA9IGNvbF9kb3VibGUoKSxcbiAgZGVidHNfb3dlZF9ieV9jb21taXR0ZWUgPSBjb2xfZG91YmxlKCksXG4gIGNvdmVyYWdlX3N0YXJ0X2RhdGUgPSBjb2xfZGF0ZXRpbWUoZm9ybWF0ID0gXCJcIiksXG4gIGNvdmVyYWdlX2VuZF9kYXRlID0gY29sX2RhdGV0aW1lKGZvcm1hdCA9IFwiXCIpLFxuICBmZWRlcmFsX2Z1bmRzX2ZsYWcgPSBjb2xfbG9naWNhbCgpLFxuICBoYXNfcmFpc2VkX2Z1bmRzID0gY29sX2xvZ2ljYWwoKVxuICAjIC4uLiB3aXRoIDEgbW9yZSBjb2x1bW5zXG4pXG5TZWUgc3BlYyguLi4pIGZvciBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9ucy5cbiJ9 -->
-<pre><code>Parsed with column specification:
-cols(
-  .default = col_character(),
-  district_number = col_double(),
-  load_date = col_datetime(format = &quot;&quot;),
-  first_file_date = col_date(format = &quot;&quot;),
-  last_file_date = col_date(format = &quot;&quot;),
-  last_f2_date = col_date(format = &quot;&quot;),
-  two_year_period = col_double(),
-  candidate_election_year = col_double(),
-  candidate_inactive = col_logical(),
-  active_through = col_double(),
-  election_year = col_double(),
-  cycle = col_double(),
-  is_election = col_logical(),
-  receipts = col_double(),
-  disbursements = col_double(),
-  cash_on_hand_end_period = col_double(),
-  debts_owed_by_committee = col_double(),
-  coverage_start_date = col_datetime(format = &quot;&quot;),
-  coverage_end_date = col_datetime(format = &quot;&quot;),
-  federal_funds_flag = col_logical(),
-  has_raised_funds = col_logical()
-  # ... with 1 more columns
-)
-See spec(...) for full column specifications.</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBsb29rIGF0IHN0cnVjdHVyZSBvZiBkYXRhXG5zdHIoZGF0YSlcbmBgYCJ9 -->
-<pre class="r"><code># look at structure of data
+data &lt;- read_csv(file = &#39;2019-07-01_dem-POTUS.csv&#39;, col_names = TRUE)
+
+# look at the the columns &amp; type of observations contained in each column
 str(data)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiQ2xhc3NlcyDigJh0YmxfZGbigJksIOKAmHRibOKAmSBhbmQgJ2RhdGEuZnJhbWUnOlx0MzYgb2JzLiBvZiAgNDMgdmFyaWFibGVzOlxuICQgbmFtZSAgICAgICAgICAgICAgICAgICAgOiBjaHIgIFwiSE9XRSwgQUxBTlwiIFwiV0lMTElBTVNPTiwgTUFSSUFOTkVcIiBcIkJPT0tFUiwgQ09SWSBBLlwiIFwiTkVXTkFOLCBCUklBTiBERUFOXCIgLi4uXG4gJCBvZmZpY2UgICAgICAgICAgICAgICAgICA6IGNociAgXCJQXCIgXCJQXCIgXCJQXCIgXCJQXCIgLi4uXG4gJCBvZmZpY2VfZnVsbCAgICAgICAgICAgICA6IGNociAgXCJQcmVzaWRlbnRcIiBcIlByZXNpZGVudFwiIFwiUHJlc2lkZW50XCIgXCJQcmVzaWRlbnRcIiAuLi5cbiAkIHBhcnR5ICAgICAgICAgICAgICAgICAgIDogY2hyICBcIkRFTVwiIFwiREVNXCIgXCJERU1cIiBcIkRFTVwiIC4uLlxuICQgcGFydHlfZnVsbCAgICAgICAgICAgICAgOiBjaHIgIFwiREVNT0NSQVRJQyBQQVJUWVwiIFwiREVNT0NSQVRJQyBQQVJUWVwiIFwiREVNT0NSQVRJQyBQQVJUWVwiIFwiREVNT0NSQVRJQyBQQVJUWVwiIC4uLlxuICQgc3RhdGUgICAgICAgICAgICAgICAgICAgOiBjaHIgIFwiVVNcIiBcIlVTXCIgXCJVU1wiIFwiVVNcIiAuLi5cbiAkIGRpc3RyaWN0ICAgICAgICAgICAgICAgIDogY2hyICBcIjAwXCIgXCIwMFwiIFwiMDBcIiBcIjAwXCIgLi4uXG4gJCBkaXN0cmljdF9udW1iZXIgICAgICAgICA6IG51bSAgMCAwIDAgMCAwIDAgMCAwIDAgMCAuLi5cbiAkIGVsZWN0aW9uX2Rpc3RyaWN0cyAgICAgIDogY2hyICBcInswMH1cIiBcInswMH1cIiBcInswMH1cIiBcInswMH1cIiAuLi5cbiAkIGVsZWN0aW9uX3llYXJzICAgICAgICAgIDogY2hyICBcInsyMDIwfVwiIFwiezIwMjB9XCIgXCJ7MjAyMH1cIiBcInsyMDIwfVwiIC4uLlxuICQgY3ljbGVzICAgICAgICAgICAgICAgICAgOiBjaHIgIFwiezIwMTgsMjAyMH1cIiBcInsyMDIwfVwiIFwiezIwMjB9XCIgXCJ7MjAyMH1cIiAuLi5cbiAkIGNhbmRpZGF0ZV9zdGF0dXMgICAgICAgIDogY2hyICBcIkNcIiBcIkNcIiBcIkNcIiBcIk5cIiAuLi5cbiAkIGluY3VtYmVudF9jaGFsbGVuZ2UgICAgIDogY2hyICBcIkNcIiBcIkNcIiBcIkNcIiBcIkNcIiAuLi5cbiAkIGluY3VtYmVudF9jaGFsbGVuZ2VfZnVsbDogY2hyICBcIkNoYWxsZW5nZXJcIiBcIkNoYWxsZW5nZXJcIiBcIkNoYWxsZW5nZXJcIiBcIkNoYWxsZW5nZXJcIiAuLi5cbiAkIGxvYWRfZGF0ZSAgICAgICAgICAgICAgIDogUE9TSVhjdCwgZm9ybWF0OiBcIjIwMTktMDUtMTYgMjE6MDk6MjRcIiBcIjIwMTktMDUtMTYgMjE6MDk6MjRcIiBcIjIwMTktMDUtMTYgMjE6MDk6MjRcIiAuLi5cbiAkIGZpcnN0X2ZpbGVfZGF0ZSAgICAgICAgIDogRGF0ZSwgZm9ybWF0OiBcIjIwMTgtMTAtMjRcIiBcIjIwMTktMDItMDRcIiBcIjIwMTktMDItMDFcIiAuLi5cbiAkIGxhc3RfZmlsZV9kYXRlICAgICAgICAgIDogRGF0ZSwgZm9ybWF0OiBcIjIwMTgtMTAtMjRcIiBcIjIwMTktMDItMDRcIiBcIjIwMTktMDItMDFcIiAuLi5cbiAkIGxhc3RfZjJfZGF0ZSAgICAgICAgICAgIDogRGF0ZSwgZm9ybWF0OiBcIjIwMTgtMTAtMjRcIiBcIjIwMTktMDItMDRcIiBcIjIwMTktMDItMDFcIiAuLi5cbiAkIGNhbmRpZGF0ZV9pZCAgICAgICAgICAgIDogY2hyICBcIlAwMDAwODU2NVwiIFwiUDAwMDA5OTEwXCIgXCJQMDAwMDk3OTVcIiBcIlAwMDAxMjE0NlwiIC4uLlxuICQgdHdvX3llYXJfcGVyaW9kICAgICAgICAgOiBudW0gIDIwMjAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIDIwMjAgLi4uXG4gJCBjYW5kaWRhdGVfZWxlY3Rpb25feWVhciA6IG51bSAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIDIwMjAgMjAyMCAuLi5cbiAkIGFkZHJlc3NfY2l0eSAgICAgICAgICAgIDogY2hyICBcIkNBUkxJU0xFXCIgXCJTQUNSQU1FTlRPXCIgXCJORVdBUktcIiBcIkFVU1RJTlwiIC4uLlxuICQgYWRkcmVzc19zdGF0ZSAgICAgICAgICAgOiBjaHIgIFwiUEFcIiBcIkNBXCIgXCJOSlwiIFwiVFhcIiAuLi5cbiAkIGFkZHJlc3Nfc3RyZWV0XzEgICAgICAgIDogY2hyICBcIjUyOCBOLiBCRURGT1JEIFNULlwiIFwiMTc4NyBUUklCVVRFIFJPQUQgU1VJVEUgS1wiIFwiUE8gQk9YIDMyMDA5XCIgXCI1MzEyIENISU5BIEdBUkRFTiBEUlwiIC4uLlxuICQgYWRkcmVzc19zdHJlZXRfMiAgICAgICAgOiBjaHIgIE5BIE5BIE5BIE5BIC4uLlxuICQgYWRkcmVzc196aXAgICAgICAgICAgICAgOiBjaHIgIFwiMTcwMTNcIiBcIjk1ODE1XCIgXCIwNzEwMlwiIFwiNzg3MzBcIiAuLi5cbiAkIGNhbmRpZGF0ZV9pbmFjdGl2ZSAgICAgIDogbG9naSAgRkFMU0UgRkFMU0UgRkFMU0UgRkFMU0UgRkFMU0UgRkFMU0UgLi4uXG4gJCBhY3RpdmVfdGhyb3VnaCAgICAgICAgICA6IG51bSAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIC4uLlxuICQgY2FuZGlkYXRlX2lkXzEgICAgICAgICAgOiBjaHIgIFwiUDAwMDA4NTY1XCIgXCJQMDAwMDk5MTBcIiBcIlAwMDAwOTc5NVwiIFwiUDAwMDEyMTQ2XCIgLi4uXG4gJCBlbGVjdGlvbl95ZWFyICAgICAgICAgICA6IG51bSAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIDIwMjAgMjAyMCAuLi5cbiAkIGN5Y2xlICAgICAgICAgICAgICAgICAgIDogbnVtICAyMDIwIDIwMjAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIDIwMjAgMjAyMCAyMDIwIC4uLlxuICQgaXNfZWxlY3Rpb24gICAgICAgICAgICAgOiBsb2dpICBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSAuLi5cbiAkIHJlY2VpcHRzICAgICAgICAgICAgICAgIDogbnVtICA0NjkzIDE1NDY5NzUgNzkyMzIwNCAxIDkzNzMyNjEgLi4uXG4gJCBkaXNidXJzZW1lbnRzICAgICAgICAgICA6IG51bSAgNDIzMSA5OTc0NzEgMTc5MjE5NCAwIDI1MTEwNTYgLi4uXG4gJCBjYXNoX29uX2hhbmRfZW5kX3BlcmlvZCA6IG51bSAgNzk0IDU0OTUwNCA2MTMxMDEwIDEgNjg2MjIwNiAuLi5cbiAkIGRlYnRzX293ZWRfYnlfY29tbWl0dGVlIDogbnVtICAwIDEwNTAxNyA1MTk4OSAwIDAgLi4uXG4gJCBjb3ZlcmFnZV9zdGFydF9kYXRlICAgICA6IFBPU0lYY3QsIGZvcm1hdDogXCIyMDE5LTAxLTAxXCIgXCIyMDE4LTExLTAxXCIgXCIyMDE5LTAxLTAxXCIgLi4uXG4gJCBjb3ZlcmFnZV9lbmRfZGF0ZSAgICAgICA6IFBPU0lYY3QsIGZvcm1hdDogXCIyMDE5LTAzLTMxXCIgXCIyMDE5LTAzLTMxXCIgXCIyMDE5LTAzLTMxXCIgLi4uXG4gJCBmZWRlcmFsX2Z1bmRzX2ZsYWcgICAgICA6IGxvZ2kgIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIC4uLlxuICQgaGFzX3JhaXNlZF9mdW5kcyAgICAgICAgOiBsb2dpICBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgRkFMU0UgLi4uXG4gJCBwYXJ0eV8xICAgICAgICAgICAgICAgICA6IGNociAgXCJERU1cIiBcIkRFTVwiIFwiREVNXCIgXCJERU1cIiAuLi5cbiAkIG9mZmljZV8xICAgICAgICAgICAgICAgIDogY2hyICBcIlBcIiBcIlBcIiBcIlBcIiBcIlBcIiAuLi5cbiAkIGNhbmRpZGF0ZV9pbmFjdGl2ZV8xICAgIDogbG9naSAgRkFMU0UgRkFMU0UgRkFMU0UgRkFMU0UgRkFMU0UgRkFMU0UgLi4uXG4gLSBhdHRyKCosIFwic3BlY1wiKT1cbiAgLi4gY29scyhcbiAgLi4gICBuYW1lID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIG9mZmljZSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgLi4gICBvZmZpY2VfZnVsbCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgLi4gICBwYXJ0eSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgLi4gICBwYXJ0eV9mdWxsID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIHN0YXRlID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIGRpc3RyaWN0ID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIGRpc3RyaWN0X251bWJlciA9IGNvbF9kb3VibGUoKSxcbiAgLi4gICBlbGVjdGlvbl9kaXN0cmljdHMgPSBjb2xfY2hhcmFjdGVyKCksXG4gIC4uICAgZWxlY3Rpb25feWVhcnMgPSBjb2xfY2hhcmFjdGVyKCksXG4gIC4uICAgY3ljbGVzID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIGNhbmRpZGF0ZV9zdGF0dXMgPSBjb2xfY2hhcmFjdGVyKCksXG4gIC4uICAgaW5jdW1iZW50X2NoYWxsZW5nZSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgLi4gICBpbmN1bWJlbnRfY2hhbGxlbmdlX2Z1bGwgPSBjb2xfY2hhcmFjdGVyKCksXG4gIC4uICAgbG9hZF9kYXRlID0gY29sX2RhdGV0aW1lKGZvcm1hdCA9IFwiXCIpLFxuICAuLiAgIGZpcnN0X2ZpbGVfZGF0ZSA9IGNvbF9kYXRlKGZvcm1hdCA9IFwiXCIpLFxuICAuLiAgIGxhc3RfZmlsZV9kYXRlID0gY29sX2RhdGUoZm9ybWF0ID0gXCJcIiksXG4gIC4uICAgbGFzdF9mMl9kYXRlID0gY29sX2RhdGUoZm9ybWF0ID0gXCJcIiksXG4gIC4uICAgY2FuZGlkYXRlX2lkID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIHR3b195ZWFyX3BlcmlvZCA9IGNvbF9kb3VibGUoKSxcbiAgLi4gICBjYW5kaWRhdGVfZWxlY3Rpb25feWVhciA9IGNvbF9kb3VibGUoKSxcbiAgLi4gICBhZGRyZXNzX2NpdHkgPSBjb2xfY2hhcmFjdGVyKCksXG4gIC4uICAgYWRkcmVzc19zdGF0ZSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgLi4gICBhZGRyZXNzX3N0cmVldF8xID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIGFkZHJlc3Nfc3RyZWV0XzIgPSBjb2xfY2hhcmFjdGVyKCksXG4gIC4uICAgYWRkcmVzc196aXAgPSBjb2xfY2hhcmFjdGVyKCksXG4gIC4uICAgY2FuZGlkYXRlX2luYWN0aXZlID0gY29sX2xvZ2ljYWwoKSxcbiAgLi4gICBhY3RpdmVfdGhyb3VnaCA9IGNvbF9kb3VibGUoKSxcbiAgLi4gICBjYW5kaWRhdGVfaWRfMSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgLi4gICBlbGVjdGlvbl95ZWFyID0gY29sX2RvdWJsZSgpLFxuICAuLiAgIGN5Y2xlID0gY29sX2RvdWJsZSgpLFxuICAuLiAgIGlzX2VsZWN0aW9uID0gY29sX2xvZ2ljYWwoKSxcbiAgLi4gICByZWNlaXB0cyA9IGNvbF9kb3VibGUoKSxcbiAgLi4gICBkaXNidXJzZW1lbnRzID0gY29sX2RvdWJsZSgpLFxuICAuLiAgIGNhc2hfb25faGFuZF9lbmRfcGVyaW9kID0gY29sX2RvdWJsZSgpLFxuICAuLiAgIGRlYnRzX293ZWRfYnlfY29tbWl0dGVlID0gY29sX2RvdWJsZSgpLFxuICAuLiAgIGNvdmVyYWdlX3N0YXJ0X2RhdGUgPSBjb2xfZGF0ZXRpbWUoZm9ybWF0ID0gXCJcIiksXG4gIC4uICAgY292ZXJhZ2VfZW5kX2RhdGUgPSBjb2xfZGF0ZXRpbWUoZm9ybWF0ID0gXCJcIiksXG4gIC4uICAgZmVkZXJhbF9mdW5kc19mbGFnID0gY29sX2xvZ2ljYWwoKSxcbiAgLi4gICBoYXNfcmFpc2VkX2Z1bmRzID0gY29sX2xvZ2ljYWwoKSxcbiAgLi4gICBwYXJ0eV8xID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIG9mZmljZV8xID0gY29sX2NoYXJhY3RlcigpLFxuICAuLiAgIGNhbmRpZGF0ZV9pbmFjdGl2ZV8xID0gY29sX2xvZ2ljYWwoKVxuICAuLiApXG4ifQ== -->
-<pre><code>Classes ‘tbl_df’, ‘tbl’ and 'data.frame':   36 obs. of  43 variables:
- $ name                    : chr  &quot;HOWE, ALAN&quot; &quot;WILLIAMSON, MARIANNE&quot; &quot;BOOKER, CORY A.&quot; &quot;NEWNAN, BRIAN DEAN&quot; ...
- $ office                  : chr  &quot;P&quot; &quot;P&quot; &quot;P&quot; &quot;P&quot; ...
- $ office_full             : chr  &quot;President&quot; &quot;President&quot; &quot;President&quot; &quot;President&quot; ...
- $ party                   : chr  &quot;DEM&quot; &quot;DEM&quot; &quot;DEM&quot; &quot;DEM&quot; ...
- $ party_full              : chr  &quot;DEMOCRATIC PARTY&quot; &quot;DEMOCRATIC PARTY&quot; &quot;DEMOCRATIC PARTY&quot; &quot;DEMOCRATIC PARTY&quot; ...
- $ state                   : chr  &quot;US&quot; &quot;US&quot; &quot;US&quot; &quot;US&quot; ...
- $ district                : chr  &quot;00&quot; &quot;00&quot; &quot;00&quot; &quot;00&quot; ...
- $ district_number         : num  0 0 0 0 0 0 0 0 0 0 ...
- $ election_districts      : chr  &quot;{00}&quot; &quot;{00}&quot; &quot;{00}&quot; &quot;{00}&quot; ...
- $ election_years          : chr  &quot;{2020}&quot; &quot;{2020}&quot; &quot;{2020}&quot; &quot;{2020}&quot; ...
- $ cycles                  : chr  &quot;{2018,2020}&quot; &quot;{2020}&quot; &quot;{2020}&quot; &quot;{2020}&quot; ...
- $ candidate_status        : chr  &quot;C&quot; &quot;C&quot; &quot;C&quot; &quot;N&quot; ...
- $ incumbent_challenge     : chr  &quot;C&quot; &quot;C&quot; &quot;C&quot; &quot;C&quot; ...
- $ incumbent_challenge_full: chr  &quot;Challenger&quot; &quot;Challenger&quot; &quot;Challenger&quot; &quot;Challenger&quot; ...
- $ load_date               : POSIXct, format: &quot;2019-05-16 21:09:24&quot; &quot;2019-05-16 21:09:24&quot; &quot;2019-05-16 21:09:24&quot; ...
- $ first_file_date         : Date, format: &quot;2018-10-24&quot; &quot;2019-02-04&quot; &quot;2019-02-01&quot; ...
- $ last_file_date          : Date, format: &quot;2018-10-24&quot; &quot;2019-02-04&quot; &quot;2019-02-01&quot; ...
- $ last_f2_date            : Date, format: &quot;2018-10-24&quot; &quot;2019-02-04&quot; &quot;2019-02-01&quot; ...
- $ candidate_id            : chr  &quot;P00008565&quot; &quot;P00009910&quot; &quot;P00009795&quot; &quot;P00012146&quot; ...
- $ two_year_period         : num  2020 2020 2020 2020 2020 2020 2020 2020 2020 2020 ...
- $ candidate_election_year : num  2020 2020 2020 2020 2020 2020 2020 2020 2020 2020 ...
- $ address_city            : chr  &quot;CARLISLE&quot; &quot;SACRAMENTO&quot; &quot;NEWARK&quot; &quot;AUSTIN&quot; ...
- $ address_state           : chr  &quot;PA&quot; &quot;CA&quot; &quot;NJ&quot; &quot;TX&quot; ...
- $ address_street_1        : chr  &quot;528 N. BEDFORD ST.&quot; &quot;1787 TRIBUTE ROAD SUITE K&quot; &quot;PO BOX 32009&quot; &quot;5312 CHINA GARDEN DR&quot; ...
- $ address_street_2        : chr  NA NA NA NA ...
- $ address_zip             : chr  &quot;17013&quot; &quot;95815&quot; &quot;07102&quot; &quot;78730&quot; ...
- $ candidate_inactive      : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
- $ active_through          : num  2020 2020 2020 2020 2020 ...
- $ candidate_id_1          : chr  &quot;P00008565&quot; &quot;P00009910&quot; &quot;P00009795&quot; &quot;P00012146&quot; ...
- $ election_year           : num  2020 2020 2020 2020 2020 2020 2020 2020 2020 2020 ...
- $ cycle                   : num  2020 2020 2020 2020 2020 2020 2020 2020 2020 2020 ...
- $ is_election             : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
- $ receipts                : num  4693 1546975 7923204 1 9373261 ...
- $ disbursements           : num  4231 997471 1792194 0 2511056 ...
- $ cash_on_hand_end_period : num  794 549504 6131010 1 6862206 ...
- $ debts_owed_by_committee : num  0 105017 51989 0 0 ...
- $ coverage_start_date     : POSIXct, format: &quot;2019-01-01&quot; &quot;2018-11-01&quot; &quot;2019-01-01&quot; ...
- $ coverage_end_date       : POSIXct, format: &quot;2019-03-31&quot; &quot;2019-03-31&quot; &quot;2019-03-31&quot; ...
- $ federal_funds_flag      : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
- $ has_raised_funds        : logi  TRUE TRUE TRUE TRUE TRUE FALSE ...
- $ party_1                 : chr  &quot;DEM&quot; &quot;DEM&quot; &quot;DEM&quot; &quot;DEM&quot; ...
- $ office_1                : chr  &quot;P&quot; &quot;P&quot; &quot;P&quot; &quot;P&quot; ...
- $ candidate_inactive_1    : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
- - attr(*, &quot;spec&quot;)=
-  .. cols(
-  ..   name = col_character(),
-  ..   office = col_character(),
-  ..   office_full = col_character(),
-  ..   party = col_character(),
-  ..   party_full = col_character(),
-  ..   state = col_character(),
-  ..   district = col_character(),
-  ..   district_number = col_double(),
-  ..   election_districts = col_character(),
-  ..   election_years = col_character(),
-  ..   cycles = col_character(),
-  ..   candidate_status = col_character(),
-  ..   incumbent_challenge = col_character(),
-  ..   incumbent_challenge_full = col_character(),
-  ..   load_date = col_datetime(format = &quot;&quot;),
-  ..   first_file_date = col_date(format = &quot;&quot;),
-  ..   last_file_date = col_date(format = &quot;&quot;),
-  ..   last_f2_date = col_date(format = &quot;&quot;),
-  ..   candidate_id = col_character(),
-  ..   two_year_period = col_double(),
-  ..   candidate_election_year = col_double(),
-  ..   address_city = col_character(),
-  ..   address_state = col_character(),
-  ..   address_street_1 = col_character(),
-  ..   address_street_2 = col_character(),
-  ..   address_zip = col_character(),
-  ..   candidate_inactive = col_logical(),
-  ..   active_through = col_double(),
-  ..   candidate_id_1 = col_character(),
-  ..   election_year = col_double(),
-  ..   cycle = col_double(),
-  ..   is_election = col_logical(),
-  ..   receipts = col_double(),
-  ..   disbursements = col_double(),
-  ..   cash_on_hand_end_period = col_double(),
-  ..   debts_owed_by_committee = col_double(),
-  ..   coverage_start_date = col_datetime(format = &quot;&quot;),
-  ..   coverage_end_date = col_datetime(format = &quot;&quot;),
-  ..   federal_funds_flag = col_logical(),
-  ..   has_raised_funds = col_logical(),
-  ..   party_1 = col_character(),
-  ..   office_1 = col_character(),
-  ..   candidate_inactive_1 = col_logical()
-  .. )</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB2aWV3IGRhdGEgaW4gc2VwYXJhdGUgdGFiXG5WaWV3KGRhdGEpXG5gYGAifQ== -->
-<pre class="r"><code># view data in separate tab
-View(data)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="cleaning-data" class="section level4">
-<h4>Cleaning Data</h4>
+<div id="clean-data" class="section level2">
+<h2>Clean Data</h2>
 <p>I’m including only the candidates who were in the first debate, and adding Bullock.</p>
+<div id="choose-columns-for-analysis" class="section level3">
+<h3>Choose columns for analysis</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTYXZlIGNvbHVtbiBuYW1lcyB0byBjb2x1bW5zXG5jb2x1bW5zIDwtIGNvbG5hbWVzKGRhdGEpXG4jIEtlZXAgb25seSBjb2x1bW5zIG5lZWRlZCBmb3IgYW5hbHlzaXNcbiMgY3JlYXRlIGEgbGlzdCBvZiB0aGUgMjAgY2FuZGlkYXRlcyB3aG8gcXVhbGlmaWVkXG4jIGZvciB0aGUgZmlyc3QgZGVtb2NyYXRpYyBwcmltYXJ5IGRlYmF0ZVxuY2FuZGlkYXRlcyA8LSBjKFwiQmVubmV0dFwiLCBcIkJpZGVuXCIsXG4gICAgICAgICAgICAgICAgXCJCb29rZXJcIiwgXCJCdWxsb2NrXCIsXG4gICAgICAgICAgICAgICAgXCJCdXR0aWdpZWdcIiwgXCJDYXN0cm9cIixcbiAgICAgICAgICAgICAgICBcImRlIEJsYXNpb1wiLCBcIkRlbGFuZXlcIixcbiAgICAgICAgICAgICAgICBcIkdhYmJhcmRcIiwgXCJHaWxsaWJyYW5kXCIsXG4gICAgICAgICAgICAgICAgXCJIYXJyaXNcIiwgXCJJbnNsZWVcIixcbiAgICAgICAgICAgICAgICBcIktsb2J1Y2hhclwiLCBcIk1vdWx0b25cIixcbiAgICAgICAgICAgICAgICBcIk8nUm91cmtlXCIsIFwiUnlhblwiLFxuICAgICAgICAgICAgICAgIFwiU2FuZGVyc1wiLCBcIldhcnJlblwiLFxuICAgICAgICAgICAgICAgIFwiV2lsbGlhbXNvblwiLCBcIllhbmdcIilcbiMgbG9vcCB0aHJvdWdoIG5hbWVzIHRvIHJldGFpbiBvbmx5IHJvd3MgaW4gY2FuZGlkYXRlcyB2YXJpYWJsZVxuYGBgIn0= -->
-<pre class="r"><code># Save column names to columns
-columns &lt;- colnames(data)
-# Keep only columns needed for analysis
-# create a list of the 20 candidates who qualified
-# for the first democratic primary debate
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MTEsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFCdTBZUzJ3YlJYVHQyRzdpTk00WGhSTllYQWhxc1BLaERSYXE4RHF4aXFuampUWkdTVkhFYXJ3N2E0KzAzald6NDRad0traEZQU0QxM0NKTzVRWkNpQk5jVVBsY2tGS0puaW9rSkxnaUxseUtCSWVhMmQyWjlhN3RrS0ttcUM0WmFiMHo3ODI4TisvcmZVOWUyMTVLYmljRlFZZ0tRL0dJRUIyaTAxaVUva1NFbUREaXZOOFNoS0ZwT2htbHp3UjlFZ3lSZkVYYUtzeW54WkpZWnBDWnJXS3BWQlRYTjZYeWZIcGRsSXRpdVZ4Z3VQRzhKSjB2eVBQcFZVbStrQll6RER4VkxteVZSYm85Nyt4T3J4VjhZazlJejhyU2EvSjV5a0tXOGdXNWtzNFhLaEpEUHJOWlhOOXcyWndyRmNybDlPYXFWS25RcTVTS214V3hLS2ZYNVF6ZGxYSnVtN3V5UDNmM202czdZdnE3OWs5emQ3OFZ0OVNORHk0LzljWEx2d3Z1RUY5L1hubnozS2N6TjcrOEpMRGhuZnU4Y2lkNXR2bVJ1SEw5NS9HZHVUL0VON0x2VFA1MitXbi9IUGpsKzAvMjkyOEpuZUdkKyt3OTcxeW0rVlgrNnM1ejRrdmJYLzk0N2RwMXZrbGNuYXY5Y09OT01uQXVxTlhvaHNobnEvNnMvQ3FmVmJaN1orVUxYVFJHTmhib2VQSDBtZE1oUURhN3VCQUdyR1JET3hhWEZsODRFd0lzckdTWHU0aXVMRk4vOENTOWpkenI1MjYvZTVPOTJmcER0bjQvNTcwUkV6VGtXSEhWQUxiTnJzNkJzVFZBSUgzZmV6QW0wZlovVDljelA3ZHA3czhiVjZpVnorWityWDY4VElkdzhFaXljNUUrVDQvU1ROQ0FYR21qL0JJT2tNMW5WV0RYRmN0VTZzRFVGRWlmSnNUSTBoaDZHRU1Wb2lheDJYcE1RM2ExaFczWWdHWUhDRFFOUTl0V2JPSkk1d0ZQcXBRZzBpaEFRWnphdUk2d1RSUWRHVkRST2x0VDFMQzkwSk1lZENrSW05VmdsZGlLdFFzMXBicW5xRmFqZ1FpQkhEMVJCN2FDQWJJcFdtK1ptbjJBRlpLVUpNam8yRkZEV0Y4ajJOck5jSjJOMFNkNmlmNjAyKzIvdWpiRzdDWlVXYVp6V0RqdlUyemRiZndvT3pPdFdvWUJWV0poUmEwRERGUUNNZWZybzVqVEhkTjVmT2hNZE9ob1ZxdHF3TWRCcUdNNkhwMklFTTR0ak81UWQ4NUo2Qlp1QUhJQTE2bUFpOUIwUjFEakg1M2thSmltd2t6LzN3d2Z0bDhkU1JJNHppUURSR2V5UThld2FrZ0Z4c0NiL05GeDRrZEl1UU5LWklEL3VQNGwwNGZyUTBkRFpXQ1RWOGg4cC9wVW1BbEwxNUhLVjZQZWlwWm5CcWNZYndKTTluaHA1aTVDNkdCVk9VenJUNEtSU25oRnlkZUsyV3BVZlZHbm9ITkZSTXRhanVlMWFzckg3RUdBT1RTaDdxa0d0UDB3OGt0WGgzZUx3NmVScVRwY1RPTG9sbXJCclBGN1Bka0hGUlJpeExDQUZ2d0dlZUJTdUc5OVRYWXRWNjV3RVQvYjJScVNubFBpNWJ1S2ZEUDBMZWtuT2tBTUlWRVdENEF2Y1Z0eitOdW82VWR1NTlZbWRVNTAwWmZjV3lta2pxMVdyZTUvd0FXazlCbU85Uk1qN3RxUXMwYTJMeXQzbmZ0cFpSelNEam1rLzBDRDd5TEVvT2I2RFNaQmMwMzZLSWRvQURHbFE0MGlESzlob2VnR3FIRzE5blF6UFBnSkwwUzRNb1paUlBIMVRLK0tLZTd3aUIvdlJIeXRSYTEyUC9IT3o4Ym9Kdjk2R3RSQnkrak8zVHl6RDlPdGl0YzhjYnRnOTdvYUt5ZXNwbU0wbS9WVTRsM0hJN2dMRUtkR0I2Ymd0Y1ZZQzh6dDNEanpSR0ErMm5YM09JOTlHcXZJNU9hSUc2QUtlZFNtc0xYck5vTXlUWXhNbm5PU0ZHcG5pRVg4bkpoMHhHY1FKdFhmVG02Q0Npa1hBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["cash_on_hand_end_period"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["receipts"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["disbursements"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["address_state"],"name":[5],"type":["chr"],"align":["left"]},{"label":["candidate_id"],"name":[6],"type":["chr"],"align":["left"]},{"label":["first_file_date"],"name":[7],"type":["date"],"align":["right"]},{"label":["last_file_date"],"name":[8],"type":["date"],"align":["right"]},{"label":["last_f2_date"],"name":[9],"type":["date"],"align":["right"]},{"label":["debts_owed_by_committee"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["has_raised_funds"],"name":[11],"type":["lgl"],"align":["right"]}],"data":[{"1":"HOWE, ALAN","2":"793.52","3":"4692.84","4":"4230.84","5":"PA","6":"P00008565","7":"2018-10-24","8":"2018-10-24","9":"2018-10-24","10":"0.00","11":"TRUE"},{"1":"WILLIAMSON, MARIANNE","2":"549503.93","3":"1546975.06","4":"997471.13","5":"CA","6":"P00009910","7":"2019-02-04","8":"2019-02-04","9":"2019-02-04","10":"105016.54","11":"TRUE"},{"1":"BOOKER, CORY A.","2":"6131010.43","3":"7923204.28","4":"1792193.85","5":"NJ","6":"P00009795","7":"2019-02-01","8":"2019-02-01","9":"2019-02-01","10":"51989.35","11":"TRUE"},{"1":"NEWNAN, BRIAN DEAN","2":"1.00","3":"1.00","4":"0.00","5":"TX","6":"P00012146","7":"2019-05-23","8":"2019-05-23","9":"2019-05-23","10":"0.00","11":"TRUE"},{"1":"O'ROURKE, ROBERT BETO","2":"6862205.77","3":"9373261.40","4":"2511055.63","5":"TX","6":"P00010793","7":"2019-03-14","8":"2019-03-14","9":"2019-03-14","10":"0.00","11":"TRUE"},{"1":"SIMPSON, GLENN SCOTT ALLISTAIR MR.","2":"-6528.00","3":"0.00","4":"0.00","5":"NY","6":"P00008573","7":"2018-10-24","8":"2018-10-24","9":"2018-10-24","10":"0.00","11":"FALSE"}],"options":{"columns":{"min":{},"max":[10],"total":[11]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="choose-candidates-for-analysis" class="section level3">
+<h3>Choose candidates for analysis</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjcmVhdGUgYSB2ZWN0b3Igb2YgdGhlIGNhbmRpZGF0ZXMgdG8gYmUgYW5hbHl6ZWRcbiMgZmlyc3QgZGViYXRlIGNhbmRpZGF0ZXMgd2l0aCBCdWxsb2NrXG5cbmNhbmRpZGF0ZXMgPC0gYyhcIkJlbm5ldHRcIiwgXCJCaWRlblwiLFxuICAgICAgICAgICAgICAgIFwiQm9va2VyXCIsIFwiQnVsbG9ja1wiLFxuICAgICAgICAgICAgICAgIFwiQnV0dGlnaWVnXCIsIFwiQ2FzdHJvXCIsXG4gICAgICAgICAgICAgICAgXCJkZSBCbGFzaW9cIiwgXCJEZWxhbmV5XCIsXG4gICAgICAgICAgICAgICAgXCJHYWJiYXJkXCIsIFwiR2lsbGlicmFuZFwiLFxuICAgICAgICAgICAgICAgIFwiSGFycmlzXCIsIFwiSW5zbGVlXCIsXG4gICAgICAgICAgICAgICAgXCJLbG9idWNoYXJcIiwgXCJNb3VsdG9uXCIsXG4gICAgICAgICAgICAgICAgXCJPJ1JvdXJrZVwiLCBcIlJ5YW5cIixcbiAgICAgICAgICAgICAgICBcIlNhbmRlcnNcIiwgXCJXYXJyZW5cIixcbiAgICAgICAgICAgICAgICBcIldpbGxpYW1zb25cIiwgXCJZYW5nXCIpXG5cblxuYGBgIn0= -->
+<pre class="r"><code># create a vector of the candidates to be analyzed
+# first debate candidates with Bullock
+
 candidates &lt;- c(&quot;Bennett&quot;, &quot;Biden&quot;,
                 &quot;Booker&quot;, &quot;Bullock&quot;,
                 &quot;Buttigieg&quot;, &quot;Castro&quot;,
@@ -1942,10 +1832,10 @@ candidates &lt;- c(&quot;Bennett&quot;, &quot;Biden&quot;,
                 &quot;Gabbard&quot;, &quot;Gillibrand&quot;,
                 &quot;Harris&quot;, &quot;Inslee&quot;,
                 &quot;Klobuchar&quot;, &quot;Moulton&quot;,
-                &quot;O'Rourke&quot;, &quot;Ryan&quot;,
+                &quot;O&#39;Rourke&quot;, &quot;Ryan&quot;,
                 &quot;Sanders&quot;, &quot;Warren&quot;,
                 &quot;Williamson&quot;, &quot;Yang&quot;)
-# loop through names to retain only rows in candidates variable</code></pre>
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1953,7 +1843,7 @@ candidates &lt;- c(&quot;Bennett&quot;, &quot;Biden&quot;,
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkRlbW9jcmF0aWMgUHJlc2lkZW50aWFsIEZ1bmRyYWlzaW5nIGFzIG9mIDAxIEp1bHkgMjAxOSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCg0KIyMjIyBDb21tYW5kcw0KKipSdW4qKjogcGxhY2UgY3Vyc29yIGluc2lkZSBjb2RlIGNodW5rLCBgQ3RybCArIFNoaWZ0ICsgRW50ZXJgLiANCg0KKipOZXcgY2h1bmsqKjogYEN0cmwgKyBhbHQgKyBpYC4NCg0KKipQcmV2aWV3IEhUTUwgZmlsZSoqOiBgQ3RybCArIFNoaWZ0ICsgS2AuDQoNClVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IGNvZGUgY2h1bmtzLg0KSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaXMgZGlzcGxheWVkLg0KDQojIyMgSW5zdGFsbGF0aW9uICYgU2V0dXANCmBgYHtyIHNldHVwfQ0KbGlicmFyeShkcGx5cikNCmxpYnJhcnkoZ2dwbG90MikNCmxpYnJhcnkocmVhZHIpDQpgYGANCg0KIyMjIyBJbXBvcnQgRGF0YQ0KYGBge3IgZGF0YSwgd2FybmluZz1GQUxTRX0NCiMgSW1wb3J0IGRhdGEgZnJvbSBDU1YgYXMgdGliYmxlIChyZWxhdGl2ZSBwYXRoKQ0KZGF0YSA8LSByZWFkX2NzdihmaWxlID0gJzIwMTktMDctMDFfZGVtLVBPVFVTLmNzdicsIGNvbF9uYW1lcyA9IFRSVUUpDQoNCiMgbG9vayBhdCBzdHJ1Y3R1cmUgb2YgZGF0YQ0Kc3RyKGRhdGEpDQoNCiMgdmlldyBkYXRhIGluIHNlcGFyYXRlIHRhYg0KVmlldyhkYXRhKQ0KYGBgDQoNCg0KIyMjIyBDbGVhbmluZyBEYXRhDQpJJ20gaW5jbHVkaW5nIG9ubHkgdGhlIGNhbmRpZGF0ZXMgd2hvIHdlcmUgaW4gdGhlIGZpcnN0IGRlYmF0ZSwgYW5kIGFkZGluZyBCdWxsb2NrLg0KYGBge3IgY2xlYW59DQojIFNhdmUgY29sdW1uIG5hbWVzIHRvIGNvbHVtbnMNCmNvbHVtbnMgPC0gY29sbmFtZXMoZGF0YSkNCg0KIyBLZWVwIG9ubHkgY29sdW1ucyBuZWVkZWQgZm9yIGFuYWx5c2lzDQoNCg0KIyBjcmVhdGUgYSBsaXN0IG9mIHRoZSAyMCBjYW5kaWRhdGVzIHdobyBxdWFsaWZpZWQNCiMgZm9yIHRoZSBmaXJzdCBkZW1vY3JhdGljIHByaW1hcnkgZGViYXRlDQoNCmNhbmRpZGF0ZXMgPC0gYygiQmVubmV0dCIsICJCaWRlbiIsDQogICAgICAgICAgICAgICAgIkJvb2tlciIsICJCdWxsb2NrIiwNCiAgICAgICAgICAgICAgICAiQnV0dGlnaWVnIiwgIkNhc3RybyIsDQogICAgICAgICAgICAgICAgImRlIEJsYXNpbyIsICJEZWxhbmV5IiwNCiAgICAgICAgICAgICAgICAiR2FiYmFyZCIsICJHaWxsaWJyYW5kIiwNCiAgICAgICAgICAgICAgICAiSGFycmlzIiwgIkluc2xlZSIsDQogICAgICAgICAgICAgICAgIktsb2J1Y2hhciIsICJNb3VsdG9uIiwNCiAgICAgICAgICAgICAgICAiTydSb3Vya2UiLCAiUnlhbiIsDQogICAgICAgICAgICAgICAgIlNhbmRlcnMiLCAiV2FycmVuIiwNCiAgICAgICAgICAgICAgICAiV2lsbGlhbXNvbiIsICJZYW5nIikNCg0KIyBsb29wIHRocm91Z2ggbmFtZXMgdG8gcmV0YWluIG9ubHkgcm93cyBpbiBjYW5kaWRhdGVzIHZhcmlhYmxlDQoNCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkRlbW9jcmF0aWMgUHJlc2lkZW50aWFsIEZ1bmRyYWlzaW5nIGFzIG9mIDAxIEp1bHkgMjAxOSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCiMjIEluc3RhbGxhdGlvbiAmIFNldHVwDQpgYGB7ciBzZXR1cH0NCmxpYnJhcnkoZHBseXIpDQpsaWJyYXJ5KGdncGxvdDIpDQpsaWJyYXJ5KHJlYWRyKQ0KYGBgDQoNCiMjIEltcG9ydCBEYXRhDQpTb3VyY2U6IEZFQy5nb3YgfCBDYW1wYWlnbiBGaW5hbmNlIERhdGEgfCBCcm93c2UgRGF0YSB8IENhbmRpZGF0ZXMgZm9yIFByZXNpZGVudA0KDQpGaWx0ZXJzOg0KDQoqIEVsZWN0aW9uIHllYXI6IDIwMjANCiogVGltZSBwZXJpb2Q6IDIwMTktMjAyMA0KKiBQb2xpdGljYWwgUGFydHk6IERlbW9jcmF0aWMNCmBgYHtyIGRhdGF9DQojIEltcG9ydCBkYXRhIGZyb20gQ1NWIGFzIHRpYmJsZSAocmVsYXRpdmUgcGF0aCkNCmRhdGEgPC0gcmVhZF9jc3YoZmlsZSA9ICcyMDE5LTA3LTAxX2RlbS1QT1RVUy5jc3YnLCBjb2xfbmFtZXMgPSBUUlVFKQ0KDQojIGxvb2sgYXQgdGhlIHRoZSBjb2x1bW5zICYgdHlwZSBvZiBvYnNlcnZhdGlvbnMgY29udGFpbmVkIGluIGVhY2ggY29sdW1uDQpzdHIoZGF0YSkNCmBgYA0KDQoNCiMjIENsZWFuIERhdGENCg0KSSdtIGluY2x1ZGluZyBvbmx5IHRoZSBjYW5kaWRhdGVzIHdobyB3ZXJlIGluIHRoZSBmaXJzdCBkZWJhdGUsIGFuZCBhZGRpbmcgQnVsbG9jay4NCg0KIyMjIENob29zZSBjb2x1bW5zIGZvciBhbmFseXNpcw0KDQpgYGB7ciBjbGVhbn0NCiMgc2VsZWN0IGNvbHVtbnMgeW91IG5lZWQgYnkgbmFtZQ0KZGYgPC0gZGF0YVssIGMoIm5hbWUiLA0KICAgICAgICAgICAgICAgImNhc2hfb25faGFuZF9lbmRfcGVyaW9kIiwNCiAgICAgICAgICAgICAgICJyZWNlaXB0cyIsDQogICAgICAgICAgICAgICAiZGlzYnVyc2VtZW50cyIsDQogICAgICAgICAgICAgICAiYWRkcmVzc19zdGF0ZSIsDQogICAgICAgICAgICAgICAiY2FuZGlkYXRlX2lkIiwNCiAgICAgICAgICAgICAgICJmaXJzdF9maWxlX2RhdGUiLA0KICAgICAgICAgICAgICAgImxhc3RfZmlsZV9kYXRlIiwNCiAgICAgICAgICAgICAgICJsYXN0X2YyX2RhdGUiLA0KICAgICAgICAgICAgICAgImRlYnRzX293ZWRfYnlfY29tbWl0dGVlIiwNCiAgICAgICAgICAgICAgICJoYXNfcmFpc2VkX2Z1bmRzIildDQoNCiMgbG9vayBhdCB0aGUgZGF0YSBpbiBhIG5ldyB0YWINCmhlYWQoZGYpDQpgYGANCg0KIyMjIENob29zZSBjYW5kaWRhdGVzIGZvciBhbmFseXNpcw0KDQpgYGB7cn0NCiMgY3JlYXRlIGEgdmVjdG9yIG9mIHRoZSBjYW5kaWRhdGVzIHRvIGJlIGFuYWx5emVkDQojIGZpcnN0IGRlYmF0ZSBjYW5kaWRhdGVzIHdpdGggQnVsbG9jaw0KDQpjYW5kaWRhdGVzIDwtIGMoIkJlbm5ldHQiLCAiQmlkZW4iLA0KICAgICAgICAgICAgICAgICJCb29rZXIiLCAiQnVsbG9jayIsDQogICAgICAgICAgICAgICAgIkJ1dHRpZ2llZyIsICJDYXN0cm8iLA0KICAgICAgICAgICAgICAgICJkZSBCbGFzaW8iLCAiRGVsYW5leSIsDQogICAgICAgICAgICAgICAgIkdhYmJhcmQiLCAiR2lsbGlicmFuZCIsDQogICAgICAgICAgICAgICAgIkhhcnJpcyIsICJJbnNsZWUiLA0KICAgICAgICAgICAgICAgICJLbG9idWNoYXIiLCAiTW91bHRvbiIsDQogICAgICAgICAgICAgICAgIk8nUm91cmtlIiwgIlJ5YW4iLA0KICAgICAgICAgICAgICAgICJTYW5kZXJzIiwgIldhcnJlbiIsDQogICAgICAgICAgICAgICAgIldpbGxpYW1zb24iLCAiWWFuZyIpDQoNCg0KYGBgDQoNCg0K</div>
 
 
 

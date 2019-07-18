@@ -3,48 +3,59 @@ title: "Democratic Presidential Fundraising as of 01 July 2019"
 output: html_notebook
 ---
 
-
-#### Commands
-**Run**: place cursor inside code chunk, `Ctrl + Shift + Enter`. 
-
-**New chunk**: `Ctrl + alt + i`.
-
-**Preview HTML file**: `Ctrl + Shift + K`.
-
-Unlike *Knit*, *Preview* does not run any code chunks.
-Instead, the output of the chunk when it was last run is displayed.
-
-### Installation & Setup
+## Installation & Setup
 ```{r setup}
 library(dplyr)
 library(ggplot2)
 library(readr)
 ```
 
-#### Import Data
-```{r data, warning=FALSE}
+## Import Data
+Source: FEC.gov | Campaign Finance Data | Browse Data | Candidates for President
+
+Filters:
+
+* Election year: 2020
+* Time period: 2019-2020
+* Political Party: Democratic
+```{r data}
 # Import data from CSV as tibble (relative path)
 data <- read_csv(file = '2019-07-01_dem-POTUS.csv', col_names = TRUE)
 
-# look at structure of data
+# look at the the columns & type of observations contained in each column
 str(data)
-
-# view data in separate tab
-View(data)
 ```
 
 
-#### Cleaning Data
+## Clean Data
+
 I'm including only the candidates who were in the first debate, and adding Bullock.
+
+### Choose columns for analysis
+
 ```{r clean}
-# Save column names to columns
-columns <- colnames(data)
+# select columns you need by name
+df <- data[, c("name",
+               "cash_on_hand_end_period",
+               "receipts",
+               "disbursements",
+               "address_state",
+               "candidate_id",
+               "first_file_date",
+               "last_file_date",
+               "last_f2_date",
+               "debts_owed_by_committee",
+               "has_raised_funds")]
 
-# Keep only columns needed for analysis
+# look at the data in a new tab
+head(df)
+```
 
+### Choose candidates for analysis
 
-# create a list of the 20 candidates who qualified
-# for the first democratic primary debate
+```{r}
+# create a vector of the candidates to be analyzed
+# first debate candidates with Bullock
 
 candidates <- c("Bennett", "Biden",
                 "Booker", "Bullock",
@@ -57,7 +68,7 @@ candidates <- c("Bennett", "Biden",
                 "Sanders", "Warren",
                 "Williamson", "Yang")
 
-# loop through names to retain only rows in candidates variable
 
 ```
+
 
